@@ -1,0 +1,11 @@
+<app-sizer [(size)]="fontSizepx"></app-sizer>
+<div [style.font-size.px]="fontSizepx"></div>
+<app-sandbox2></app-sandbox2>
+<h1>Angular Router App</h1>
+<nav>
+  <ul>
+    <li><a routerLink="/first-component">First</a></li>
+    <li><a routerLink="/second-component">Second</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+<div [hidden]="submitted">
+<form #petForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required [(ngModel)]="model.name"/>
+  </div>
+  <div>
+    <label for="speice">Speices</label>
+    <select id="speice" name='specie' required [(ngModel)]="model.specie">
+      <option *ngFor="let specie of species" [value]="specie">
+        {{ specie }}
+      </option>
+    </select>
+  </div>
+  <button [disabled]="!petForm.form.valid" type="submit">Submit</button>
+</form>
+</div>
+<div [hidden]="!submitted">
+  <h2>Submitted</h2>
+  <p>Name:{{model.name}}</p>
+  <p>Specie:{{model.specie}}</p>
+  <button (click)="submitted=false">Edit</button>
+
+</div>
+

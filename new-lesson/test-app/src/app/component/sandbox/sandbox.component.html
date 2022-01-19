@@ -1,0 +1,23 @@
+<button (click)="toggleText($event)">Toggle</button>
+{{ showText }}
+<h3>
+  {{ todaysDate | date: "short" }}
+</h3>
+<p>
+  {{ "World" | greetingsPipe }}
+</p>
+<button [disabled]="isUnchanged">Btn</button>
+<div [class.sale]="onSale">HI</div>
+<div [style.color] ="'red'">HI</div>
+<button (mouseover)="onSave()"></button>
+<label>{{name}}</label>
+<input [(ngModel)]="name">
+
+
+
+
+
+
+
+<p appHigh>Hi</p>
+

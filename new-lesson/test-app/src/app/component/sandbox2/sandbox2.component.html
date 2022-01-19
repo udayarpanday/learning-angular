@@ -1,0 +1,17 @@
+<div *ngIf="isActive">
+  <h1>Active</h1>
+</div>
+<div>
+  <p *ngFor="let item of items; let i = index">{{ i }}-{{ item.name }}</p>
+</div>
+<div [ngSwitch]="switchItems.name">
+<h1 *ngSwitchCase="'Bob'">
+Hi Bob
+</h1>
+<h1 *ngSwitchCase="'Monica'">
+Hi Monica
+</h1>
+<h1 *ngSwitchDefault="'Monica'">
+Hi Monica
+</h1>
+</div>

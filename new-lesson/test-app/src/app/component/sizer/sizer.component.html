@@ -1,0 +1,8 @@
+<div>
+  <button (click)="inc()">Increment</button>
+  <button (click)="dec()">Increment</button>
+  <label [style.font-size.px]="size">FontSize:{{ size }}</label>
+</div>
+<input #ref type="text" [(ngModel)]="phone"  />
+<span *ngIf="true">{{ref.value}}</span>
+<!-- <button (click)="callPhone(ref.value)">Abv</button> -->

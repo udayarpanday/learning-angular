@@ -1,0 +1,22 @@
+<div>
+  <label for="name">Name:</label>
+  <input id="name" type="text" [formControl]="name" />
+  <p>Value:{{ name.value }}</p>
+  <p>
+    <button (click)="updateName()">updateName</button>
+  </p>
+</div>
+-----------------------
+<div>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>First Name</label>
+      <input id="fName" type="text" formControlName="firstName" />
+    </div>
+    <div>
+      <label>Last Name</label>
+      <input id="lName" type="text" formControlName="lastName" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
